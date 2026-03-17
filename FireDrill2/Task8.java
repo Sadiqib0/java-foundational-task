@@ -6,7 +6,7 @@ public class Task8 {
         int sum = 0;
         int count = 0;
 
-        while (count < 10) {
+        for (;count < 10;) {
             System.out.print("Enter valid score " + (count + 1) + ": ");
             int score = InputReader.nextInt();
 
