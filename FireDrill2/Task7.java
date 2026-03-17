@@ -16,7 +16,7 @@ public class Task7 {
            }
          
            	double average = (double)sum/count;
-            System.out.println("The sum and average of the score :" +sum+ "and "+average);
+            System.out.println("The sum and average of the score :" +average+ " ");
             }
 }
 
