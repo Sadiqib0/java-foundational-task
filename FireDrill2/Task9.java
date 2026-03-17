@@ -6,18 +6,17 @@ public class Task9 {
         int sum = 0;
 
         for (int i = 1; i <= 10; i++) {
-            System.out.print("Enter score :");
+            System.out.print("Enter a score :");
             int score = InputReader.nextInt();
 
             if (score >= 0 && score <= 100) {
             	sum+=score;
-
     }
 
 }
  System.out.println("Sum of valid scores: " + sum);
 
-}
+   }
 }
 
 
