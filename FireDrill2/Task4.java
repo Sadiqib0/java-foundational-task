@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Task1 {
+public class Task4 {
     public static void main(String[] args) {
         Scanner inputReader = new Scanner(System.in);
         int sum = 0;
@@ -8,11 +8,12 @@ public class Task1 {
         for (int i = 1; i <= 10; i++) {
             System.out.print("Enter score " + i + ": ");
             int score = inputReader.nextInt();
+            if (i % 2 == 0){
             sum+= score; 
+            }
            }
+            System.out.println("The sum of even index sum :" +sum);
          
-        System.out.println("The total sum is: " + sum);
-    }
+            }
 }
-
 
