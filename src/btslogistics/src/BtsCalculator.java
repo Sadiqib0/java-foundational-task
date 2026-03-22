@@ -1,16 +1,23 @@
-package dsa;
-
 public class BtsCalculator {
 
     public static void main(String[] args) {
 
     }
-
     private static final int totalPackages = 100;
     private static final int basePay = 5000;
 
     public static int calculateWage(int successfulDeliveries) {
+
+        if (successfulDeliveries < 0) {
+            throw new IllegalArgumentException("Deliveries cannot be negative. Got: " + successfulDeliveries);
+        }
+
+        if (successfulDeliveries > totalPackages) {
+            throw new IllegalArgumentException("Deliveries cannot exceed " + totalPackages + ". Got: " + successfulDeliveries);
+        }
+
         int amountPerParcel = getParcelAmount(successfulDeliveries);
+
         return (successfulDeliveries * amountPerParcel) + basePay;
     }
 

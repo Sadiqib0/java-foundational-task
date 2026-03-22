@@ -1,15 +1,14 @@
-package dsa;
-
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BtsCalculatorTest {
 
     @Test
-    void lessThan_50_Delivery() {
+     void lessThan_50_Delivery() {
         int wage = BtsCalculator.calculateWage(25);
         assertEquals(9000, wage);
     }
+
     @Test
     void exactly_50_Deliveries() {
         int wage = BtsCalculator.calculateWage(50);
@@ -45,5 +44,23 @@ public class BtsCalculatorTest {
     void exactly_100_Deliveries() {
         int wage = BtsCalculator.calculateWage(100);
         assertEquals(55000, wage);
+    }
+
+    @Test
+    void negativeDeliveriesNumbers() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> BtsCalculator.calculateWage(-1)
+        );
+        assertTrue(exception.getMessage().contains("negative"));
+    }
+
+    @Test
+    void deliveriesExceeding100_shouldThrowIllegalArgumentException() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> BtsCalculator.calculateWage(101)
+        );
+        assertTrue(exception.getMessage().contains("exceed"));
     }
 }
