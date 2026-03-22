@@ -49,7 +49,7 @@ public class pizzaWahala {
         int leftover = totalSlices - numPeople;
         int totalMoney = boxes * pricePerBox;
 
-        System.out.println("453Number of pizaa boxes to buy = " + boxes + " boxes");
+        System.out.println("Number of pizaa boxes to buy = " + boxes + " boxes");
         System.out.println("Number of slices after serving = " + leftover + " slices");
         System.out.println("Price = " + totalMoney);
     }
