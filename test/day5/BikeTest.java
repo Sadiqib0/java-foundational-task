@@ -136,7 +136,7 @@ class BikeTest {
         assertEquals(3, bike.getGear());
         bike.accelerate();
         assertEquals(43, bike.getSpeed());
-        assertEquals(4, bike.getGear()); //
+        assertEquals(4, bike.getGear()); 
     }
 
     @Test
