@@ -1,3 +1,5 @@
+package day2.firedrill2;
+
 import java.util.Scanner;
 
 public class Nokia3310 {
@@ -38,8 +40,7 @@ Enter your choice:
                 System.out.println("Power off / End session");
                 break;  // Only way the infinite loop ends
             }
-
-            /
+            
             switch (mainChoice) {
                 case 1 -> {
                     String pbPrompt = """

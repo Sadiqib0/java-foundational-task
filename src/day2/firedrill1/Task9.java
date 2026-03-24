@@ -1,3 +1,5 @@
+package day2.firedrill1;
+
 public class Task9 {
     public static void main(String[] args) {
         int totalSum = 0;

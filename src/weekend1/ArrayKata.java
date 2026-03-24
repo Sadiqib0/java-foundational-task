@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ArrayKata {
 
     public static int maximumIn(int[] numbers) {
@@ -121,19 +119,3 @@ public class ArrayKata {
         return root * root == num;
     }
 }
-            public static void main(String[] args) {
-                int[] numbers = {2, 4, 9, 7, 12, 15, 16, 1};
-                System.out.println("--Array Kata Test Cases--");
-                System.out.println("1. Max Element: " + ArrayKata.maximumIn(numbers));
-                System.out.println("2. Min Element: " + ArrayKata.minimumIn(numbers));
-                System.out.println("3. Total Sum: " + ArrayKata.sumOf(numbers));
-                System.out.println("4. Sum of Evens: " + ArrayKata.sumOfEvenNumbersIn(numbers));
-                System.out.println("5. Sum of Odds: " + ArrayKata.sumOfOddNumbersIn(numbers));
-                System.out.println("7. Count of Odds: " + ArrayKata.noOfOddNumbersIn(numbers));
-                System.out.println("8. Count of Evens: " + ArrayKata.noOfEvenNumbersIn(numbers));
-                System.out.println("6. Min and Max: " + Arrays.toString(ArrayKata.maximumAndMinimumOf(numbers)));
-                System.out.println("9. Even Numbers: " + Arrays.toString(ArrayKata.evenNumbersIn(numbers)));
-                System.out.println("10. Odd Numbers: " + Arrays.toString(ArrayKata.oddNumbersIn(numbers)));
-                System.out.println("11. Square Numbers: " + Arrays.toString(ArrayKata.squareNumbersIn(numbers)));
-
-            }
