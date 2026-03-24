@@ -146,7 +146,7 @@ class BikeTest {
         bike.setSpeed(22);
         bike.decelerate();
         assertEquals(20, bike.getSpeed());
-        assertEquals(1, bike.getGear()); // Back to Gear 1 [cite: 18]
+        assertEquals(1, bike.getGear());
     }
 
     @Test
