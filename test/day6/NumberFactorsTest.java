@@ -1,3 +1,5 @@
+package day6;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
@@ -10,7 +12,6 @@ class NumberFactorsTest {
     void testRegularCompositeNumber() {
         List<Integer> expected = Arrays.asList(1, 2, 3, 4, 6, 12);
         List<Integer> actual = NumberFactors.getFactors(12);
-
         assertEquals(expected, actual, "Should return all factors of 12 in order");
     }
 
@@ -18,7 +19,6 @@ class NumberFactorsTest {
     void testPerfectSquare() {
         List<Integer> expected = Arrays.asList(1, 5, 25);
         List<Integer> actual = NumberFactors.getFactors(25);
-
         assertEquals(expected, actual, "Should handle perfect squares without duplicating the root");
     }
 
@@ -33,7 +33,6 @@ class NumberFactorsTest {
         int input = 20;
         List<Integer> expected = Arrays.asList(2, 2, 5);
         List<Integer> actual = NumberFactors.getReverseFactors(input);
-
         assertEquals(expected, actual, "The factors of 20 should be [2, 2, 5]");
     }
     @Test
@@ -41,7 +40,6 @@ class NumberFactorsTest {
         int input = 100;
         List<Integer> expected = Arrays.asList(2, 2, 5, 5);
         List<Integer> actual = NumberFactors.getReverseFactors(input);
-
         assertEquals(expected, actual, "The factors of 20 should be [2, 2, 5, 5]");
     }
 
