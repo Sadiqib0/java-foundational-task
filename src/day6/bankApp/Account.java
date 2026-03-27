@@ -16,7 +16,7 @@ public class Account {
         this.number = number;
         this.name = name;
         this.pin = pin;
-        this.balance = BigDecimal.ZERO; // Good practice to initialize
+        this.balance = BigDecimal.ZERO;
     }
 
     public void deposit(BigDecimal amount) {
@@ -32,11 +32,9 @@ public class Account {
         if (amount.compareTo(BigDecimal.ZERO) <= 0) {
             throw new InvalidAmountException("Withdrawal amount must be greater than zero.");
         }
-
         if (this.balance.compareTo(amount) < 0) {
             throw new InsufficientBalanceException("Insufficient funds.");
         }
-
         this.balance = this.balance.subtract(amount);
     }
 
@@ -58,5 +56,8 @@ public class Account {
         if (!this.pin.equals(enteredPin)) {
             throw new InvalidPinException("Invalid PIN provided.");
         }
+    }
+    public String getName() {
+        return this.name;
     }
 }

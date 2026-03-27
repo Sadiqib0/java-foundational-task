@@ -15,24 +15,24 @@ public class BankTest {
 
     @BeforeEach
     public void setUp() {
-        myBank = new Bank("Moniepoint Bank");
+        myBank = new Bank("Moniepoint Bank","50515");
     }
 
     @Test
-    public void testCreateAccount() {
+    public void createAccount_test() {
         int accNo = myBank.createAccount("Alice", "1111");
         assertEquals(1, accNo);
     }
 
     @Test
-    public void testDepositViaBank() {
+    public void deposit_through_bank_test() {
         int accNo = myBank.createAccount("Bob", "2222");
         myBank.deposit(accNo, new BigDecimal("10000.00"));
         assertEquals(new BigDecimal("10000.00"), myBank.checkBalance(accNo, "2222"));
     }
 
     @Test
-    public void testTransferBetweenAccounts() {
+    public void transferBetweenAccounts_test() {
         int senderAcc = myBank.createAccount("Charlie", "3333");
         int receiverAcc = myBank.createAccount("David", "4444");
 
@@ -44,7 +44,7 @@ public class BankTest {
     }
 
     @Test
-    public void testTransferWithInvalidAccount_throwsException() {
+    public void transferWithInvalidAccount_throwsException_test() {
         int senderAcc = myBank.createAccount("Eve", "5555");
         myBank.deposit(senderAcc, new BigDecimal("1000.00"));
 

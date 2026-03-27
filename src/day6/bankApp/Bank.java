@@ -9,10 +9,12 @@ import java.util.List;
 public class Bank {
     private String name;
     private List<Account> accounts;
-    private int nextAccountNumber = 1; // Auto-incrementing account numbers
+    private int nextAccountNumber = 1;
+    private String bankCode;
 
-    public Bank(String name) {
+    public Bank(String name,String bankCode) {
         this.name = name;
+        this.bankCode=bankCode;
         this.accounts = new ArrayList<>();
     }
 
@@ -56,5 +58,13 @@ public class Bank {
             }
         }
         throw new BankAppException("Account with number " + accountNumber + " not found.");
+    }
+    public String getBankCode() {
+        return this.bankCode;
+    }
+
+    public String getAccountName(int accountNumber) {
+        Account account = findAccount(accountNumber);
+        return account.getName();
     }
 }
