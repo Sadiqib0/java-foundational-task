@@ -1,6 +1,7 @@
 package week3;
 
 import org.junit.jupiter.api.Test;
+import week3.day1.SlidingWindow;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
